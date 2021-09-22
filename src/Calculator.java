@@ -1,15 +1,13 @@
+import java.util.*;
+import java.util.stream.Stream;
+
 public class Calculator {
-    public static void main(String[] args) {
-    }
-    public static int Add(String text) {
+    public static int Add(String text){
         if(text.isEmpty()){
             return 0;
-        } else if(text.contains(",")){
-            String [] input = text.split(",");
-            return toInt(input[0]) + toInt(input[1]);
-        }
-        else {
-            return toInt(text);
+        } else{
+            Stream<String> numbers = Arrays.stream(text.split(","));
+            return numbers.mapToInt(Integer::parseInt).sum();
         }
     }
     public static int toInt(String input){
