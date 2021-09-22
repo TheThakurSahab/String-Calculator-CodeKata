@@ -10,7 +10,4 @@ public class Calculator {
             return numbers.mapToInt(Integer::parseInt).sum();
         }
     }
-    public static int toInt(String input){
-        return Integer.parseInt(input);
-    }
 }
