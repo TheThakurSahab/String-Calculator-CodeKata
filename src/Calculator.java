@@ -6,10 +6,13 @@ public class Calculator {
             return 0;
         } else if(text.contains(",")){
             String [] input = text.split(",");
-            return Integer.parseInt(input[0]) + Integer.parseInt(input[1]);
+            return toInt(input[0]) + toInt(input[1]);
         }
         else {
-            return Integer.parseInt(text);
+            return toInt(text);
         }
+    }
+    public static int toInt(String input){
+        return Integer.parseInt(input);
     }
 }
