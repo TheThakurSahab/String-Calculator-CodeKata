@@ -1,11 +1,16 @@
+import java.util.*;
+import java.util.stream.Stream;
+
 public class Calculator {
-    public static void main(String[] args) {
-    }
-    public static int Add(String text) {
+    public static int Add(String text){
         if(text.isEmpty()){
             return 0;
-        } else {
-            return Integer.parseInt(text);
+        } else{
+            Stream<String> numbers = Arrays.stream(text.split(","));
+            return numbers.mapToInt(Integer::parseInt).sum();
         }
+    }
+    public static int toInt(String input){
+        return Integer.parseInt(input);
     }
 }
