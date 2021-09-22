@@ -21,4 +21,8 @@ public class CalculatorTest {
         assertEquals(12,Calculator.Add("6,4,2"));
         assertEquals(15,Calculator.Add("6,5,4"));
     }
+    @Test
+    public void shouldReturnSumIfStringHaveTwoNumberDelimitedBySpecialChar(){
+        assertEquals(11, Calculator.Add("8\n3"));
+    }
 }
