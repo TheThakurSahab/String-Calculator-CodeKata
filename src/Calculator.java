@@ -6,11 +6,8 @@ public class Calculator {
         if(text.isEmpty()){
             return 0;
         } else{
-            Stream<String> numbers = Arrays.stream(text.split(","));
+            Stream<String> numbers = Arrays.stream(text.split(",|\n"));
             return numbers.mapToInt(Integer::parseInt).sum();
         }
-    }
-    public static int toInt(String input){
-        return Integer.parseInt(input);
     }
 }
