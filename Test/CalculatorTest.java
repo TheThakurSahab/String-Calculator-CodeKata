@@ -10,4 +10,8 @@ public class CalculatorTest {
     public void shouldReturnNumberIfStringHaveNumber(){
         assertEquals(5,Calculator.Add("5"));
     }
+    @Test
+    public void shouldReturnSumIfStringHaveTwoNumberDelimitedByComma(){
+        assertEquals(8, Calculator.Add("5,3"));
+    }
 }
