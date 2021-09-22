@@ -8,6 +8,6 @@ public class CalculatorTest {
     }
     @Test
     public void shouldReturnNumberIfStringHaveNumber(){
-        assertEquals(1,Calculator.Add("1"));
+        assertEquals(5,Calculator.Add("5"));
     }
 }
